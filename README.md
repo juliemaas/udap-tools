@@ -16,6 +16,8 @@ DCR
 
 -Signing a JWT for DCR
 
+Use the private key to sign the JWT; the password may be needed by your library to activate the private key within the software
+
 -Dynamic Client Registration Request
 
 JWT-Based Client Authentication
