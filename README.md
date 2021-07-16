@@ -2,6 +2,9 @@
 This open source repository was created for community members to contribute resources
 to help others implement the [UDAP](https://www.udap.org) Profiles for clients and servers.
 
+[**UDAP Implementers Spreadsheet**](https://docs.google.com/spreadsheets/d/1awkXXQaeuRv5ysLo8R6f1fpfBlpTJGfSPK4xRjsai7M/edit#gid=1298836267)
+Please add client, server, and identity services to the sheet above. Additional fields indicate use cases supported and deployment status.
+
 UDAP Client Assets:
 
 Key management
@@ -12,6 +15,45 @@ Key management
 
 DCR
 
+Start by requesting server metadata:
+
+    {
+			"name": " https://stage.healthtogo.me:8181/fhir/r4/stage/metadata",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer NSZuABXmmxK8HYAXaW0G_2sFNUBSU8cD",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://stage.healthtogo.me:8181/fhir/r4/stage/metadata",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"healthtogo",
+						"me"
+					],
+					"port": "8181",
+					"path": [
+						"fhir",
+						"r4",
+						"stage",
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		}
+    
 -Example Software Statement
 
 -Signing a JWT for DCR
